@@ -46,3 +46,10 @@ optional Rest API arguments:
 - epithet=string
 - locality=int
 - accession=string
+
+
+#### Resources:
+- https://towardsdatascience.com/build-a-simple-web-app-with-github-pages-flask-and-heroku-bcb2dacc8331
+- https://medium.com/the-andela-way/deploying-a-python-flask-app-to-heroku-41250bda27d0
+- https://medium.com/the-andela-way/how-i-developed-an-api-in-python-using-flask-4e388674f1
+- https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
