@@ -15,5 +15,5 @@ jobs:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: "fieldnotes-api" #Must be unique in Heroku
           heroku_email: "de2356@columbia.edu"
-      # - name: Install pakcages
-        # run: pip3 install -r requirements.txt
+      - name: Install packages
+        run: pip3 install -r requirements.txt
