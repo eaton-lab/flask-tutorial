@@ -51,6 +51,22 @@ class FieldNotes(Resource):
         return json.loads(subdf.to_json())
 
 
+
+@app.route("/")
+def index():
+    """
+    Render the JSON REST data as HTML on the index page, unless 
+    arguments are missing, then simply show JSON error message.
+    """
+    # convert json response to HTML and return it
+    return (
+        "Access the FieldNotes API at "
+        "<a href='http://www.fieldnotes.eaton-lab.org/api'>"
+        "http://www.fieldnotes.eaton-lab.org/api</a>"
+    )
+
+
+
 # expose FieldNotes at index/
 api.add_resource(FieldNotes, '/api')
 
