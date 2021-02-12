@@ -28,25 +28,26 @@ parser.add_argument("accession", type=str, help="accession ID (e.g., DE200)")
 
 
 class FieldNotes(Resource):
+    def __init__(self):
+        # get arguments from uri
+        self.args = parser.parse_args()
+
     def get(self):
         """
-        parses API arguments to filter the dataframe and return as json
-        """
-        # get arguments from uri
-        args = parser.parse_args()
-
+        filters the dataframe to only selected values
+        """     
         # make a copy of the database
         subdf = df.copy()
 
         # subset using selections
-        if args.get('genus'):
-            subdf = subdf[subdf.genus == args['genus']]
-        if args.get('epithet'):
-            subdf = subdf[subdf.species_epithet == args['epithet']]
-        if args.get('locality'):
-            subdf = subdf[subdf.locality == args['locality']]
-        if args.get('accession'):
-            subdf = subdf[subdf.accession == args['accession']]
+        if self.args.get('genus'):
+            subdf = subdf[subdf.genus == self.args['genus']]
+        if self.args.get('epithet'):
+            subdf = subdf[subdf.species_epithet == self.args['epithet']]
+        if self.args.get('locality'):
+            subdf = subdf[subdf.locality == self.args['locality']]
+        if self.args.get('accession'):
+            subdf = subdf[subdf.accession == self.args['accession']]
         return json.loads(subdf.to_json())
 
 
