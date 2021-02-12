@@ -53,3 +53,13 @@ optional Rest API arguments:
 - https://medium.com/the-andela-way/deploying-a-python-flask-app-to-heroku-41250bda27d0
 - https://medium.com/the-andela-way/how-i-developed-an-api-in-python-using-flask-4e388674f1
 - https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
+
+
+### Actions build notes
+
+```bash
+# installed heroku, make an account, logged in from CLI...
+heroku create hack-flask-tutorial 
+git push heroku main
+```
+

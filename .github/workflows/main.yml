@@ -13,7 +13,7 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.10.9 # This is the action
         with:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: "fieldnotes-api" #Must be unique in Heroku
+          heroku_app_name: "hack-flask-tutorial"
           heroku_email: "de2356@columbia.edu"
       - name: Install packages
         run: pip3 install -r requirements.txt
